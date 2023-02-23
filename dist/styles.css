@@ -1,5 +1,13 @@
-div {
+body {
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  justify-content: center;
+  background-color: rgb(24, 24, 24);
 }
+
+.component {
+  margin-bottom: 2rem;
+}
+
+
+

@@ -4,7 +4,8 @@ import { App } from './App';
 
 
 const rootNode = document.getElementById('app');
+
 if(rootNode){
   createRoot(rootNode)
-    .render(<App />);
+    .render(< App />);
 }
