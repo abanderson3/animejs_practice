@@ -5,9 +5,10 @@ import Anime, { anime } from 'react-animejs-wrapper'
 
 const MyAnimeComponent = () => {
   const blueSquare = {
-    height: '20px',
-    width: '20px',
+    height: '50px',
+    width: '50px',
     backgroundColor: 'lightBlue',
+    marginTop: '5px'
   };
 
   const animatedSquaresRef = useRef(null)
@@ -19,20 +20,28 @@ const MyAnimeComponent = () => {
   const seek = () => animatedSquaresRef.current.seek(1000);
   const seekPercent = () => animatedSquaresRef.current.seekPercent(50);
 
+
+  /*
+() => {
+  return anime.random(100, 500);
+},
+  */
   return (
     <>
+    <div className='subTitle'>Playing With Buttons</div>
       <Anime
         ref={animatedSquaresRef}
         config={{
-          translateX: 250,
+          translateX: 500,
+          duration: 2000,
           delay: function (_:number, i:number) {
             return i * 100;
           },
+          autoplay: false,
           loop: true,
           direction: 'alternate',
           easing: 'easeInOutSine',
           // rotate: anime.stagger([-360, 360]),
-          autoplay: true,
         }}
 
       >

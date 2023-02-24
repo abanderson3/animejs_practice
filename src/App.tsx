@@ -5,6 +5,7 @@ import StaggeredList from './StaggeredList'
 import MyAnimeComponent from './AnimationControls';
 import PlayingWithSquares from './PlayingWithSquares';
 import Title from './Title';
+import SvgMorphing from './SvgMorphing';
 
 
 export const App: FC = () => {
@@ -18,7 +19,6 @@ export const App: FC = () => {
         backgroundColor: 'rgb(28, 44, 78)',
         display: 'flex',
         flexDirection: 'column',
-        border: '1px solid red',
         width: '1000px'
       }}
       config={{
@@ -26,9 +26,9 @@ export const App: FC = () => {
       }}>
         <div>
         </div>
-        <div className='component'>
+        {/* <div className='component'>
           < StaggeredList />
-        </div>
+        </div> */}
 
         <div className='component'>
           < MyAnimeComponent />
@@ -36,6 +36,10 @@ export const App: FC = () => {
 
         <div className='component'>
           < PlayingWithSquares />
+        </div>
+
+        <div className='component'>
+          < SvgMorphing />
         </div>
       </Anime>
     </div>
