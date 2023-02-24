@@ -33,20 +33,22 @@ button:hover {
 .svg-subTitle {
   font-size: 2rem;
   margin-left: -2rem;
-  color: rgb(97, 173, 235);
+  color: rgba(63, 63, 63, 0.61);
   font-weight: 600;
   text-decoration: underline;
+  margin-bottom: -1rem;
 }
 
 .subTitle {
   display: flex;
-  color: rgb(97, 173, 235);
+  color: rgba(63, 63, 63, 0.61);
   font-size: 2rem;
   font-weight: 600;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
   text-decoration: underline;
+  margin-bottom: 2rem;
 }
 
 #demo-svg {
@@ -56,11 +58,13 @@ button:hover {
   margin-top: -4rem;
   margin-bottom: -6rem;
 }
+
 #demo-superMorph {
   width: 800px;
   height: 600px;
   margin-bottom: 5rem;
 }
+
 #demo-text {
   margin-top: 3rem;
 }

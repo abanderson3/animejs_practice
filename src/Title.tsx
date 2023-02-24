@@ -1,13 +1,12 @@
 import React, { FC, useRef } from 'react';
-// const anime = require('animejs');
+//import Anime component and anime object from library
 import Anime, { anime } from 'react-animejs-wrapper'
 
-
 interface TitleProps {
-
 }
 
 const Title: FC<TitleProps> = (props) => {
+
   const titleRef = useRef(null)
   const play = () => titleRef.current.play();
 
@@ -26,11 +25,9 @@ const Title: FC<TitleProps> = (props) => {
         translateX: [-200, 0],
         delay: anime.stagger(70, {start: 100, easing: 'easeInCirc'}),
 
-
         // direction: 'alternate',
         // autoplay: true,
         // loop: 3
-
 
       }}>
           <h1>P</h1>
@@ -54,10 +51,7 @@ const Title: FC<TitleProps> = (props) => {
           <h1>J</h1>
           <h1>S</h1>
       </Anime>
-
     </div>
-
-
   )
 }
 

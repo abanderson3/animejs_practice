@@ -7,6 +7,7 @@ interface PlayingWithSquaresProps {
 
 }
 
+// function that allows me to force the component to re-render without reloading anything on the page, allows me to reset the randomized animation values
 const useForceUpdate = () => {
   const [ value, setValue ] = useState(0);
   return () => setValue(value => value + 1)
@@ -14,10 +15,10 @@ const useForceUpdate = () => {
 
 
 const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
-
+  // reference to useForceUpdate within component.
   const forceUpdate = useForceUpdate();
 
-  //
+  // style object
   const redsquare = {
     width:'60px',
     height:'60px',
@@ -25,8 +26,8 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
     marginBottom: '20px'
   }
 
+  // reference and OnClick functions
   const divSquareRef = useRef(null);
-
   const play = () => divSquareRef.current.play();
   const pause = () => divSquareRef.current.pause();
 
@@ -41,7 +42,7 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
           flexDirection: 'column',
         }}
         config={{
-          // Move squares to left by random value between 100px and 900px
+          // Move squares on X axis by random value between 100px and 900px, inclusive, for duration of 3500ms
           translateX: {
             value: () => {
               return anime.random(100, 900);
@@ -49,7 +50,8 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             duration: 3500,
             easing: 'easeInOutSine'
           },
-          // Rotate squares
+
+          // Rotate by random degree value, between 9 clockwise or counterclockwise rotations, for duration of 3000ms.
           rotate: {
             value: () => {
               return anime.random(-3240, 3240);
@@ -57,6 +59,8 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             duration: 3000,
             easing: 'easeInOutSine'
           },
+
+          // Scale by random value between -1 and 3, after 1500ms delay, for duration of 1600ms. Complete scaling at 3100ms.
           scale: {
             value: () => {
               return anime.random(-1, 3);
@@ -65,33 +69,34 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             delay: 1500,
             easing: 'easeInOutQuart'
           },
+
+          // Move Squares by random value between -150px - 150px on their Y axis, between 2500 - 3000ms, for a random duration between 750ms - 1500ms
           translateY: {
             value: () => {
-              return anime.random(-100, 100);
+              return anime.random(-150, 150);
             },
             delay: () => {
               return anime.random(2500, 3000)
             },
             duration: () => {
-              return anime.random(750, 1000)
+              return anime.random(750, 1500)
             }
           },
+
+          // Convert square to circle between randomly between 2000-3500, duration of 1000ms
+          borderRadius: {
+            value: ['0%', '50%'],
+            delay: () => {
+              return anime.random(2000, 3500)
+            },
+            duration: 1000,
+            easings: 'easeInOutQuad'
+          },
+
           autoplay: false,
           loop: true,
           direction: 'alternate',
           delay: 300,
-
-
-          // borderRadius: {
-          //   value: ['0%', '50%'],
-          //   delay: () => {
-          //     return anime.random(2000, 3500)
-          //   },
-          //   duration: 1000,
-          //   easings: 'easeInOutQuad'
-          // },
-
-
         }}
         >
         <div style={redsquare}></div>
