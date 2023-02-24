@@ -57,12 +57,12 @@ const MyAnimeComponent = () => {
         <div style={blueSquare}>3</div>
       </Anime>
       <div className="button-panel">
-        <button onClick={restart}>Reset Animation</button>
-        <button onClick={play}>Play Animation</button>
-        <button onClick={pause}>Pause Animation</button>
-        <button onClick={reverse}>Reverse Animation</button>
-        <button onClick={seek}>Animation at 1000 ms</button>
-        <button onClick={seekPercent}>Animation at 50%</button>
+        <button onClick={restart}>Reset</button>
+        <button onClick={play}>Play</button>
+        <button onClick={pause}>Pause</button>
+        <button onClick={reverse}>Reverse</button>
+        <button onClick={seek}>At 1000 ms</button>
+        <button onClick={seekPercent}>At 50%</button>
       </div>
     </>
   )
