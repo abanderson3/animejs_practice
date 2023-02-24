@@ -2,21 +2,14 @@ import React, { FC, useRef } from 'react';
 // const anime = require('animejs');
 import Anime, { anime } from 'react-animejs-wrapper'
 
+
 interface TitleProps {
 
 }
 
 const Title: FC<TitleProps> = (props) => {
-
   const titleRef = useRef(null)
-  const titleStyle = {
-
-  }
-
   const play = () => titleRef.current.play();
-  const charStyle = {
-
-  }
 
   return (
     <div onClick={play}>
@@ -27,15 +20,18 @@ const Title: FC<TitleProps> = (props) => {
         alignItems: 'center',
         justifyContent: 'center',
         color: 'black',
-        // border: '1px solid red',
       }}
       config={{
         translateY: [-200, 0],
         translateX: [-200, 0],
         delay: anime.stagger(70, {start: 100, easing: 'easeInCirc'}),
+
+
         // direction: 'alternate',
         // autoplay: true,
         // loop: 3
+
+
       }}>
           <h1>P</h1>
           <h1>l</h1>

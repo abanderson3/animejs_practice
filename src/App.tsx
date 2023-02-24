@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 // const anime = require('animejs');
 import Anime, { anime } from 'react-animejs-wrapper'
 import StaggeredList from './StaggeredList'
-import MyAnimeComponent from './AnimationControls';
 import PlayingWithSquares from './PlayingWithSquares';
 import Title from './Title';
 import SvgMorphing from './SvgMorphing';
+import AnimationControls from './AnimationControls';
 
 
 export const App: FC = () => {
@@ -30,7 +30,7 @@ export const App: FC = () => {
         </div> */}
 
         <div className='component'>
-          < MyAnimeComponent />
+          < AnimationControls />
         </div>
 
         <div className='component'>

@@ -1,3 +1,4 @@
+import { easings } from 'animejs';
 import React, { FC, useRef, useState } from 'react';
 // const anime = require('animejs');
 import Anime, { anime } from 'react-animejs-wrapper'
@@ -16,7 +17,7 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
 
   const forceUpdate = useForceUpdate();
 
-
+  //
   const redsquare = {
     width:'60px',
     height:'60px',
@@ -40,12 +41,7 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
           flexDirection: 'column',
         }}
         config={{
-          // translateX: {
-          //   value: 650,
-          //   duration: 3000,
-          //   easing: 'easeInOutSine'
-          // },
-          autoplay: false,
+          // Move squares to left by random value between 100px and 900px
           translateX: {
             value: () => {
               return anime.random(100, 900);
@@ -53,9 +49,10 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             duration: 3500,
             easing: 'easeInOutSine'
           },
+          // Rotate squares
           rotate: {
             value: () => {
-              return anime.random(180, 3240);
+              return anime.random(-3240, 3240);
             },
             duration: 3000,
             easing: 'easeInOutSine'
@@ -79,11 +76,25 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
               return anime.random(750, 1000)
             }
           },
+          autoplay: false,
+          loop: true,
           direction: 'alternate',
-          delay: 600,
-          loop: true
+          delay: 300,
+
+
+          // borderRadius: {
+          //   value: ['0%', '50%'],
+          //   delay: () => {
+          //     return anime.random(2000, 3500)
+          //   },
+          //   duration: 1000,
+          //   easings: 'easeInOutQuad'
+          // },
+
+
         }}
         >
+        <div style={redsquare}></div>
         <div style={redsquare}></div>
         <div style={redsquare}></div>
         <div style={redsquare}></div>
