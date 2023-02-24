@@ -26,8 +26,8 @@ const Title: FC<TitleProps> = (props) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'rgb(50, 100, 78)',
-        border: '1px solid red',
+        color: 'black',
+        // border: '1px solid red',
       }}
       config={{
         translateY: [-200, 0],

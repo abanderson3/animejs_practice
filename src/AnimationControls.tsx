@@ -5,8 +5,8 @@ import Anime, { anime } from 'react-animejs-wrapper'
 
 const MyAnimeComponent = () => {
   const blueSquare = {
-    height: '50px',
-    width: '50px',
+    height: '60px',
+    width: '60px',
     backgroundColor: 'lightBlue',
     marginTop: '5px',
     display: 'flex',
@@ -51,10 +51,10 @@ const MyAnimeComponent = () => {
         }}
 
       >
+        <div style={blueSquare}>0</div>
         <div style={blueSquare}>1</div>
         <div style={blueSquare}>2</div>
         <div style={blueSquare}>3</div>
-        <div style={blueSquare}>4</div>
       </Anime>
       <div className="button-panel">
         <button onClick={restart}>Reset Animation</button>

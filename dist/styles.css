@@ -2,7 +2,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(36, 36, 36, 0.329);
+  background-color: rgba(50, 37, 116, 0.575);
   flex-direction: column;
 }
 
@@ -23,18 +23,20 @@ button {
 .svg-subTitle {
   font-size: 2rem;
   margin-left: -2rem;
-  color: rgb(50, 100, 78);
+  color: rgb(255, 255, 255);
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .subTitle {
   display: flex;
-  color: rgb(50, 100, 78);
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+  text-decoration: underline;
 }
 
 #demo-svg {
@@ -58,4 +60,9 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+#demo-text path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
 }

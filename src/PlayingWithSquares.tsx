@@ -18,8 +18,8 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
 
 
   const redsquare = {
-    width:'50px',
-    height:'50px',
+    width:'60px',
+    height:'60px',
     backgroundColor:'red',
     marginBottom: '20px'
   }
@@ -62,7 +62,7 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
           },
           scale: {
             value: () => {
-              return anime.random(0, 3);
+              return anime.random(-1, 3);
             },
             duration: 1600,
             delay: 1500,
