@@ -20,8 +20,8 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
 
   // style object
   const redsquare = {
-    width:'60px',
-    height:'60px',
+    width:'65px',
+    height:'65px',
     backgroundColor:'red',
     marginBottom: '20px'
   }

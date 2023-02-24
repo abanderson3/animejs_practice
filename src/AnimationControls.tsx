@@ -13,8 +13,8 @@ interface AnimationControlsProps {
 
 const AnimationControls: FC<AnimationControlsProps> = (props) => {
   const blueSquare = {
-    height: '60px',
-    width: '60px',
+    height: '65px',
+    width: '65px',
     backgroundColor: 'lightBlue',
     marginTop: '5px',
     marginBottom: '20px',
@@ -42,11 +42,9 @@ const AnimationControls: FC<AnimationControlsProps> = (props) => {
       <Anime
         ref={animatedSquaresRef}
         config={{
-          translateX: 900,
+          translateX: 950,
           duration: 2000,
-          delay: function (_:number, i:number) {
-            return i * 100;
-          },
+          delay: anime.stagger(110),
           autoplay: false,
           loop: true,
           direction: 'alternate',
@@ -58,10 +56,10 @@ const AnimationControls: FC<AnimationControlsProps> = (props) => {
         }}
 
       >
-        <div style={blueSquare}>0</div>
-        <div style={blueSquare}>1</div>
-        <div style={blueSquare}>2</div>
-        <div style={blueSquare}>3</div>
+        <div style={blueSquare}>0ms</div>
+        <div style={blueSquare}>100ms</div>
+        <div style={blueSquare}>200ms</div>
+        <div style={blueSquare}>300ms</div>
 
       </Anime>
       <div className="button-panel">

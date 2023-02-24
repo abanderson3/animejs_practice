@@ -26,7 +26,6 @@ const Title: FC<TitleProps> = (props) => {
         delay: anime.stagger(70, {start: 100, easing: 'easeInCirc'}),
 
         // direction: 'alternate',
-        // autoplay: true,
         // loop: 3
 
       }}>
