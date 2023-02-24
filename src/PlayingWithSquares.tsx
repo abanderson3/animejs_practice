@@ -38,9 +38,6 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          // width: '20px',
-          // height: '20px',
-          // backgroundColor: 'gray',
         }}
         config={{
           // translateX: {
@@ -51,14 +48,14 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
           autoplay: false,
           translateX: {
             value: () => {
-              return anime.random(200, 700);
+              return anime.random(100, 900);
             },
-            duration: 3000,
+            duration: 3500,
             easing: 'easeInOutSine'
           },
           rotate: {
             value: () => {
-              return anime.random(360, 920);
+              return anime.random(90, 3240);
             },
             duration: 2500,
             easing: 'easeInOutSine'
@@ -70,6 +67,13 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             duration: 1600,
             delay: 1500,
             easing: 'easeInOutQuart'
+          },
+          translateY: {
+            value: () => {
+              return anime.random(-100, 100);
+            },
+            delay: 2500,
+            duration: 1000
           },
           direction: 'alternate',
           delay: 600,
@@ -83,9 +87,13 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
 
 
       </Anime>
+      <div className='small-button-panel'>
         <button onClick={play}>Play</button>
-        <button onClick={pause}>Pause</button>
         <button onClick={forceUpdate}>New Pattern</button>
+        <button onClick={pause}>Pause</button>
+
+      </div>
+
     </div>
   )
 }

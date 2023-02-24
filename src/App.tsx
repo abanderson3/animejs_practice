@@ -16,7 +16,6 @@ export const App: FC = () => {
       <Title />
       <Anime
       style={{
-        backgroundColor: 'rgb(28, 44, 78)',
         display: 'flex',
         flexDirection: 'column',
         width: '1000px'

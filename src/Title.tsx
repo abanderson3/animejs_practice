@@ -9,8 +9,14 @@ interface TitleProps {
 const Title: FC<TitleProps> = (props) => {
 
   const titleRef = useRef(null)
+  const titleStyle = {
+
+  }
 
   const play = () => titleRef.current.play();
+  const charStyle = {
+
+  }
 
   return (
     <div onClick={play}>
@@ -21,22 +27,38 @@ const Title: FC<TitleProps> = (props) => {
         alignItems: 'center',
         justifyContent: 'center',
         color: 'rgb(50, 100, 78)',
-        border: '1px solid red'
+        border: '1px solid red',
       }}
       config={{
         translateY: [-200, 0],
-        delay: anime.stagger(100, {start: 200, easing: 'easeInOutSine'})
+        translateX: [-200, 0],
+        delay: anime.stagger(70, {start: 100, easing: 'easeInCirc'}),
+        // direction: 'alternate',
+        // autoplay: true,
+        // loop: 3
       }}>
-        <div style={{ backgroundColor: 'inherit', margin: '5px' }}>
-          <h1>Playing</h1>
-        </div>
-        <div style={{ backgroundColor: 'inherit', margin: '5px' }}>
-          <h1>With</h1>
-        </div>
-        <div style={{ backgroundColor: 'inherit', margin: '5px' }}>
-          <h1>AnimeJS</h1>
-        </div>
+          <h1>P</h1>
+          <h1>l</h1>
+          <h1>a</h1>
+          <h1>y</h1>
+          <h1>i</h1>
+          <h1>n</h1>
+          <h1>g</h1>
+          <h1>&nbsp;</h1>
+          <h1>W</h1>
+          <h1>i</h1>
+          <h1>t</h1>
+          <h1>h</h1>
+          <h1>&nbsp;</h1>
+          <h1>A</h1>
+          <h1>n</h1>
+          <h1>i</h1>
+          <h1>m</h1>
+          <h1>e</h1>
+          <h1>J</h1>
+          <h1>S</h1>
       </Anime>
+
     </div>
 
 
