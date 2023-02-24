@@ -55,14 +55,14 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
           },
           rotate: {
             value: () => {
-              return anime.random(90, 3240);
+              return anime.random(180, 3240);
             },
-            duration: 2500,
+            duration: 3000,
             easing: 'easeInOutSine'
           },
           scale: {
             value: () => {
-              return anime.random(0, 4);
+              return anime.random(0, 3);
             },
             duration: 1600,
             delay: 1500,
@@ -72,8 +72,12 @@ const PlayingWithSquares: FC<PlayingWithSquaresProps> = (props) => {
             value: () => {
               return anime.random(-100, 100);
             },
-            delay: 2500,
-            duration: 1000
+            delay: () => {
+              return anime.random(2500, 3000)
+            },
+            duration: () => {
+              return anime.random(750, 1000)
+            }
           },
           direction: 'alternate',
           delay: 600,
