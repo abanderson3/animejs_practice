@@ -1,4 +1,3 @@
-import { easings } from 'animejs';
 import React, { FC, useRef, useState } from 'react';
 // const anime = require('animejs');
 import Anime, { anime } from 'react-animejs-wrapper'
