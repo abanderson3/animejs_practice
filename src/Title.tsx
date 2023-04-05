@@ -23,7 +23,7 @@ const Title: FC<TitleProps> = (props) => {
       config={{
         translateY: [-200, 0],
         translateX: [-200, 0],
-        delay: anime.stagger(70, {start: 100, easing: 'easeInCirc'}),
+        delay: anime.stagger(72, {start: 100, easing: 'easeInCirc'}),
 
         // direction: 'alternate',
         // loop: 3
