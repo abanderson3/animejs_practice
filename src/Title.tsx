@@ -49,6 +49,7 @@ const Title: FC<TitleProps> = (props) => {
           <h1>e</h1>
           <h1>J</h1>
           <h1>S</h1>
+          <h1>!</h1>
       </Anime>
     </div>
   )
